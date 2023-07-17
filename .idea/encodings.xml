@@ -5,6 +5,10 @@
     <file url="file://$PROJECT_DIR$/../spring-boot-graphsql/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-graphsql/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-graphsql/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-multiple-database/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-multiple-database/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-requestbodyadvice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-requestbodyadvice/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-validators/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-validators/src/main/resources" charset="UTF-8" />
   </component>

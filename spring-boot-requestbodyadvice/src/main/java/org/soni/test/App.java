@@ -1,13 +1,11 @@
-package com.soni.validators;
+package org.soni.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ValidatorsApplication {
+public class App {
     public static void main(String[] args) {
-        SpringApplication.run(ValidatorsApplication.class, args);
+        SpringApplication.run(App.class, args);
     }
-
-
 }

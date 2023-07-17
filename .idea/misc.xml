@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/spring-boot-validators/pom.xml" />
         <option value="$PROJECT_DIR$/../spring-boot-graphsql/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-graphsql/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-multiple-database/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-requestbodyadvice/pom.xml" />
       </list>
     </option>
   </component>

@@ -2,18 +2,23 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring-boot-graphsql" />
+        <module name="spring-boot-multiple-database" />
         <module name="spring-boot-validators" />
+        <module name="spring-boot-requestbodyadvice" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="spring-boot-graphsql" options="-parameters" />
+      <module name="spring-boot-multiple-database" options="-parameters" />
+      <module name="spring-boot-requestbodyadvice" options="-parameters" />
       <module name="spring-boot-validators" options="-parameters" />
     </option>
   </component>
