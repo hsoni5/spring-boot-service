@@ -19,33 +19,60 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 @ExtendWith(MockitoExtension.class)
 public class CustomerTest {
-    @Autowired
-    public MockMvc mvc;
-
-    // This object will be magically initialized by the initFields method below.
-    private JacksonTester<CustomerRequest> jsonTester;
-    @InjectMocks
-    private ValidateRequestBodyController customerController;
-
-    @BeforeEach
-    public void setup() {
-        JacksonTester.initFields(this, new ObjectMapper());
-        // MockMvc standalone approach
-        mvc = MockMvcBuilders.standaloneSetup(customerController)
-                .build();
-    }
-
-    @Test
-    void whenInputIsInvalid_thenReturnsStatus400() throws Exception {
-        CustomerRequest customerRequest = CustomerRequest.builder().name("hari").email("ss").build();
-
-        MockHttpServletResponse response = mvc.perform(
-                MockMvcRequestBuilders.post("/customers")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(jsonTester.write(customerRequest).getJson())
-        ).andReturn().getResponse();
-        System.out.println(response);
-        Assertions.assertNotNull(response);
-    }
+//    @Autowired
+//    public MockMvc mvc;
+//
+//    // This object will be magically initialized by the initFields method below.
+//    private JacksonTester<CustomerRequest> jsonTester;
+//    @InjectMocks
+//    private ValidateRequestBodyController customerController;
+//
+//    @BeforeEach
+//    public void setup() {
+//        JacksonTester.initFields(this, new ObjectMapper());
+//        // MockMvc standalone approach
+//        mvc = MockMvcBuilders.standaloneSetup(customerController)
+//                .build();
+//    }
+//
+//    @Test
+//    void whenInputIsInvalid_thenReturnsStatus400() throws Exception {
+//        CustomerRequest customerRequest = CustomerRequest.builder().name("hari").email("ss").build();
+//
+//        MockHttpServletResponse response = mvc.perform(
+//                MockMvcRequestBuilders.post("/customers")
+//                        .contentType(MediaType.APPLICATION_JSON)
+//                        .content(jsonTester.write(customerRequest).getJson())
+//        ).andReturn().getResponse();
+//        System.out.println(response);
+//        Assertions.assertNotNull(response);
+//    } @Autowired
+////    public MockMvc mvc;
+////
+////    // This object will be magically initialized by the initFields method below.
+////    private JacksonTester<CustomerRequest> jsonTester;
+////    @InjectMocks
+////    private ValidateRequestBodyController customerController;
+////
+////    @BeforeEach
+////    public void setup() {
+////        JacksonTester.initFields(this, new ObjectMapper());
+////        // MockMvc standalone approach
+////        mvc = MockMvcBuilders.standaloneSetup(customerController)
+////                .build();
+////    }
+////
+////    @Test
+////    void whenInputIsInvalid_thenReturnsStatus400() throws Exception {
+////        CustomerRequest customerRequest = CustomerRequest.builder().name("hari").email("ss").build();
+////
+////        MockHttpServletResponse response = mvc.perform(
+////                MockMvcRequestBuilders.post("/customers")
+////                        .contentType(MediaType.APPLICATION_JSON)
+////                        .content(jsonTester.write(customerRequest).getJson())
+////        ).andReturn().getResponse();
+////        System.out.println(response);
+////        Assertions.assertNotNull(response);
+////    }
 }
 

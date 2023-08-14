@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.soni.com/ws/api/account"
+            xmlns:tns="http://www.soni.com/ws/api/account"
+            elementFormDefault="qualified">
+    <xsd:element name="AccountRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="accountNumber" type="xsd:int" />
+                <xsd:element name="mobileNumber" type="xsd:int" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="AccountDetailsResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="AccountDetails" type="tns:AccountDetails"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="AccountDetails">
+        <xsd:sequence>
+            <xsd:element name="accountNumber" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="type" type="xsd:string"/>
+            <xsd:element name="balance" type="xsd:double"/>
+        </xsd:sequence>
+    </xsd:complexType>
+  </xsd:schema>

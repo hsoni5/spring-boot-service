@@ -26,6 +26,7 @@ class ErrorHandlingControllerAdvice {
         }
         return error;
     }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody

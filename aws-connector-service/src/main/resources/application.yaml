@@ -1,0 +1,30 @@
+# Spring database jpa configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://
+    secretKey: medical_fees_customer-shared/prod-database
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: validate
+    show-sql: false
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQL94Dialect
+    properties.org.hibernate.envers.audit_table_suffix: _h
+    properties.org.hibernate.envers.revision_field_name: REVISION_ID
+    properties.org.hibernate.envers.revision_type_field_name: REVISION_TYPE
+  boot:
+    admin:
+      client:
+        url: http://localhost:9098/
+aws:
+  s3:
+    bucket: "oml-249893936123-oml-gf-medicalfees-prod"
+  bankSecretKey: medical_fees_customer-shared/prod-cmos-api-user
+  ibm.mq.secret.key: medical_fees_customer-shared/mq/prod/user
+
+# Spring doc swagger api configuration
+springdoc:
+  packagesToScan: com.oldmutual.medicalfees
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
