@@ -31,14 +31,13 @@ public class UserModelMapperController {
 
 				 Optional<User> userOptional = userService.getUserById(id);
 				
-				if(!userOptional.isPresent()) {
+				if(userOptional.isEmpty()) {
 					throw new UserNotFoundException("user not found");
 				}
 				
 				User user = userOptional.get();
-			
-			UserMmDto userMmDto = modelMapper.map(user, UserMmDto.class);
-			return userMmDto;
+
+		return modelMapper.map(user, UserMmDto.class);
 	
 	}
 }

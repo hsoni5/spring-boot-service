@@ -37,7 +37,7 @@ public class SwaggerConfig {
 				.title("StackSimplify User Management Service")
 				.description("This page lists all API's of User Management")
 				.version("2.0")
-				.contact(new Contact("Kalyan Reddy", "https://www.stacksimplify.com", "stacksimplify@gmail.com"))
+				.contact(new Contact("Haridas Soni", "https://www.stacksimplify.com", "stacksimplify@gmail.com"))
 				.license("License 2.0")
 				.licenseUrl("https://www.stacksimplify.com/license.html")
 				.build();
