@@ -32,7 +32,7 @@ public class OrderHateoasController {
 	public Resources<Order> getAllOrders(@PathVariable Long userid) throws UserNotFoundException {
 
 		Optional<User> userOptional = userRepository.findById(userid);
-		if (!userOptional.isPresent())
+		if (userOptional.isEmpty())
 			throw new UserNotFoundException("User Not Found");
 
 		List<Order> allorders =  userOptional.get().getOrders();

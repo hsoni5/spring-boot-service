@@ -57,7 +57,7 @@ public class UserService {
 	public User updateUserById(Long id, User user) throws UserNotFoundException {
 		Optional<User> optionalUser = userRepository.findById(id);
 
-		if (!optionalUser.isPresent()) {
+		if (optionalUser.isEmpty()) {
 			throw new UserNotFoundException("User Not found in user Repository, provide the correct user id");
 		}
 
@@ -70,7 +70,7 @@ public class UserService {
 	// deleteUserById
 	public void deleteUserById(Long id) {
 		Optional<User> optionalUser = userRepository.findById(id);
-		if (!optionalUser.isPresent()) {
+		if (optionalUser.isEmpty()) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"User Not found in user Repository, provide the correct user id");
 		}
 	

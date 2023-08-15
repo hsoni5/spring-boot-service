@@ -33,7 +33,7 @@ public class UserUriVersioningController {
 
 				 Optional<User> userOptional = userService.getUserById(id);
 				
-				if(!userOptional.isPresent()) {
+				if(userOptional.isEmpty()) {
 					throw new UserNotFoundException("user not found");
 				}
 				
@@ -51,7 +51,7 @@ public class UserUriVersioningController {
 
 				 Optional<User> userOptional = userService.getUserById(id);
 				
-				if(!userOptional.isPresent()) {
+				if(userOptional.isEmpty()) {
 					throw new UserNotFoundException("user not found");
 				}
 				

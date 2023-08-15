@@ -33,7 +33,7 @@ public class OrderController {
 	public List<Order> getAllOrders(@PathVariable Long userid) throws UserNotFoundException {
 
 		Optional<User> userOptional = userRepository.findById(userid);
-		if (!userOptional.isPresent())
+		if (userOptional.isEmpty())
 			throw new UserNotFoundException("User Not Found");
 
 		return userOptional.get().getOrders();
@@ -45,7 +45,7 @@ public class OrderController {
 	public Order createOrder(@PathVariable Long userid, @RequestBody Order order) throws UserNotFoundException {
 		Optional<User> userOptional = userRepository.findById(userid);
 
-		if (!userOptional.isPresent())
+		if (userOptional.isEmpty())
 			throw new UserNotFoundException("User Not Found");
 
 		User user = userOptional.get();
