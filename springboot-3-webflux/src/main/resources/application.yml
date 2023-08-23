@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://hari1036:root123@cluster0.org4cnh.mongodb.net/dps
+
+springdoc:
+  swagger-ui:
+     enabled: true
+     path: swagger-ui.html
+  api-docs:
+      path: /api-docs
